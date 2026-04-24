@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shree Ram CNG Cylinder Testing Co. | PESO Certified | New Delhi</title>
+  <meta name="description" content="PESO certified CNG cylinder hydrostatic testing centre near Dwarka, New Delhi. Mandatory 3-year hydro testing as per Gas Cylinder Rules 2004. Fast, reliable, government-authorized." />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green: #1a7a2e;
+      --green-light: #2ca84a;
+      --green-pale: #e8f5ec;
+      --orange: #e85d04;
+      --orange-light: #ff7b24;
+      --dark: #0d1f12;
+      --mid: #2b3d30;
+      --text: #1c2b20;
+      --muted: #5a7060;
+      --white: #ffffff;
+      --off-white: #f5f9f6;
+      --border: #c8dece;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .logo-text {
+      font-family: 'Rajdhani', sans-serif;
+    }
+
+    /* ─── TOP BAR ─── */
+    .topbar {
+      background: var(--dark);
+      color: #aec9b5;
+      font-size: 0.8rem;
+      padding: 8px 0;
+    }
+    .topbar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .topbar a { color: #aec9b5; text-decoration: none; }
+    .topbar a:hover { color: var(--orange-light); }
+    .topbar-left, .topbar-right { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    .topbar span { display: flex; align-items: center; gap: 6px; }
+
+    /* ─── HEADER / NAV ─── */
+    header {
+      background: var(--white);
+      border-bottom: 3px solid var(--green);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(26,122,46,0.12);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      height: 72px;
+    }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-icon {
+      width: 48px; height: 48px;
+      background: var(--green);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+    .logo-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+    .logo-text span { color: var(--green); display: block; }
+    .logo-sub { font-size: 0.7rem; font-family: 'Noto Sans', sans-serif; color: var(--muted); font-weight: 400; }
+
+    nav { display: flex; gap: 4px; align-items: center; }
+    nav a {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      color: var(--mid);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    nav a:hover { background: var(--green-pale); color: var(--green); }
+    .nav-cta {
+      background: var(--orange) !important;
+      color: var(--white) !important;
+      padding: 8px 18px !important;
+    }
+    .nav-cta:hover { background: var(--orange-light) !important; }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, #0d2e16 50%, #1a4025 100%);
+      color: var(--white);
+      padding: 80px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232ca84a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(44,168,74,0.2);
+      border: 1px solid rgba(44,168,74,0.4);
+      color: #7de89a;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .hero-badge::before { content: '✓'; font-size: 0.9rem; }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: #5ee87a;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #b8d4bf;
+      margin-bottom: 28px;
+    }
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--orange);
+      color: white;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--orange-light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(232,93,4,0.3); }
+    .btn-outline {
+      background: transparent;
+      color: white;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+    .hero-card {
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .hero-card h3 {
+      font-size: 1.3rem;
+      color: #7de89a;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .stat {
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #5ee87a;
+      line-height: 1;
+    }
+    .stat-label { font-size: 0.75rem; color: #8fad97; margin-top: 4px; }
+    .alert-box {
+      background: rgba(232,93,4,0.15);
+      border: 1px solid rgba(232,93,4,0.4);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 0.85rem;
+      color: #ffc09c;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .alert-box::before { content: '⚠️'; flex-shrink: 0; }
+
+    /* ─── SECTION STYLES ─── */
+    section { padding: 72px 24px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 560px;
+      margin-bottom: 48px;
+    }
+
+    /* ─── WHY HYDRO TEST ─── */
+    .law-banner {
+      background: linear-gradient(135deg, var(--green) 0%, #0f5c1f 100%);
+      border-radius: 16px;
+      padding: 36px 40px;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .law-icon { font-size: 3rem; flex-shrink: 0; }
+    .law-text h3 { font-size: 1.4rem; margin-bottom: 8px; }
+    .law-text p { font-size: 0.9rem; color: #b8e4c2; line-height: 1.6; }
+    .law-text strong { color: white; }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .why-card {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 24px;
+      border-top: 4px solid var(--green);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .why-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,122,46,0.12); }
+    .why-icon { font-size: 2rem; margin-bottom: 14px; }
+    .why-card h4 { font-size: 1.1rem; margin-bottom: 8px; color: var(--dark); }
+    .why-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+
+    /* ─── PROCESS ─── */
+    .process-section { background: var(--off-white); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0;
+      position: relative;
+    }
+    .steps::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 0; right: 0;
+      height: 2px;
+      background: var(--border);
+      z-index: 0;
+    }
+    .step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 16px;
+    }
+    .step-num {
+      width: 72px; height: 72px;
+      background: var(--green);
+      color: white;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      border: 4px solid var(--off-white);
+      box-shadow: 0 0 0 2px var(--border);
+    }
+    .step h4 { font-size: 0.95rem; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+    .step p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+    /* ─── FEATURES ─── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .features-list { list-style: none; }
+    .features-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .features-list li:last-child { border-bottom: none; }
+    .feat-icon {
+      width: 40px; height: 40px;
+      background: var(--green-pale);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .feat-text h4 { font-size: 1rem; margin-bottom: 4px; color: var(--dark); }
+    .feat-text p { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
+
+    .info-panel {
+      background: linear-gradient(160deg, var(--dark) 0%, #1a3520 100%);
+      border-radius: 20px;
+      padding: 36px;
+      color: white;
+    }
+    .info-panel h3 { font-size: 1.6rem; margin-bottom: 8px; color: #7de89a; }
+    .info-panel .sub { font-size: 0.9rem; color: #8fad97; margin-bottom: 28px; }
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.9rem;
+    }
+    .info-item:last-child { border-bottom: none; }
+    .info-item-icon { font-size: 1.2rem; width: 32px; text-align: center; }
+    .info-item-label { color: #8fad97; width: 90px; flex-shrink: 0; }
+    .info-item-val { color: white; font-weight: 500; }
+
+    /* ─── REVIEWS ─── */
+    .reviews-section { background: var(--dark); color: white; }
+    .reviews-section .section-title { color: white; }
+    .reviews-section .section-sub { color: #8fad97; }
+    .stars { color: #f5a623; font-size: 1rem; letter-spacing: 2px; margin-bottom: 10px; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 24px;
+      transition: transform 0.2s;
+    }
+    .review-card:hover { transform: translateY(-4px); }
+    .review-text { font-size: 0.9rem; color: #b8d4bf; line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+    .reviewer { font-size: 0.82rem; color: #5ee87a; font-weight: 600; }
+
+    /* ─── CONTACT ─── */
+    .contact-section { background: var(--off-white); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    .contact-card {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .contact-card-header {
+      background: var(--green);
+      color: white;
+      padding: 20px 28px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .contact-card-body { padding: 28px; }
+    .contact-detail {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .contact-detail:last-child { border-bottom: none; }
+    .c-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .c-label { font-size: 0.75rem; color: var(--muted); margin-bottom: 2px; }
+    .c-val { font-size: 0.95rem; color: var(--text); font-weight: 500; }
+    .c-val a { color: var(--green); text-decoration: none; }
+    .c-val a:hover { text-decoration: underline; }
+
+    .map-embed {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 100%;
+      min-height: 360px;
+    }
+    .map-embed iframe { width: 100%; height: 100%; min-height: 360px; border: none; display: block; }
+
+    /* ─── CTA BANNER ─── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--orange) 0%, #c43d00 100%);
+      padding: 60px 24px;
+      text-align: center;
+      color: white;
+    }
+    .cta-section h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 14px; }
+    .cta-section p { font-size: 1rem; color: rgba(255,255,255,0.8); max-width: 520px; margin: 0 auto 28px; line-height: 1.6; }
+    .cta-section .btn-white {
+      background: white;
+      color: var(--orange);
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 14px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    .cta-section .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--dark);
+      color: #8fad97;
+      padding: 48px 24px 24px;
+      font-size: 0.85rem;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand .logo-text { color: white; font-size: 1.1rem; }
+    .footer-brand p { color: #8fad97; line-height: 1.7; margin-top: 12px; font-size: 0.85rem; }
+    .footer-col h4 { font-family: 'Rajdhani', sans-serif; color: white; font-size: 1rem; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { padding: 4px 0; }
+    .footer-col ul li a { color: #8fad97; text-decoration: none; }
+    .footer-col ul li a:hover { color: #5ee87a; }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 24px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .peso-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(44,168,74,0.12);
+      border: 1px solid rgba(44,168,74,0.25);
+      color: #7de89a;
+      font-size: 0.78rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+      nav { display: none; }
+      .features-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .steps::before { display: none; }
+      .law-banner { flex-direction: column; text-align: center; }
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-content > * {
+      animation: fadeUp 0.6s ease forwards;
+      opacity: 0;
+    }
+    .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+    .hero-content > *:nth-child(2) { animation-delay: 0.25s; }
+    .hero-content > *:nth-child(3) { animation-delay: 0.4s; }
+    .hero-content > *:nth-child(4) { animation-delay: 0.55s; }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span>📍 Tajpur Khurd, Dwarka Sec-19, New Delhi – 110071</span>
+      <span>⏰ Open Daily: 9:00 AM – 6:00 PM</span>
+    </div>
+    <div class="topbar-right">
+      <a href="tel:+919811123672">📞 +91 98111 23672</a>
+      <span style="color:#4caf78;">✓ PESO Certified</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">🛢️</div>
+      <div>
+        <div class="logo-text">Shree Ram <span>CNG Cylinder Testing Co.</span></div>
+        <div class="logo-sub">PESO Authorized | Govt. of India Certified | Est. New Delhi</div>
+      </div>
+    </a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#process">Process</a>
+      <a href="#why">Why Test</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="nav-cta">📞 Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">PESO Certified — Govt. of India Authorized</div>
+      <h1>Delhi's Trusted<br/><em>CNG Cylinder</em><br/>Hydro Testing Centre</h1>
+      <p>Mandatory hydrostatic testing for your CNG vehicle cylinder as per the Gas Cylinder Rules, 2004. Fast, safe, and certified — serving Dwarka, Najafgarh, Janakpuri & surrounding areas.</p>
+      <div class="hero-buttons">
+        <a href="tel:+919811123672" class="btn-primary">📞 Book Your Test Now</a>
+        <a href="#process" class="btn-outline">How It Works →</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>🏆 Why Choose Us</h3>
+      <div class="stat-row">
+        <div class="stat">
+          <div class="stat-num">4.5★</div>
+          <div class="stat-label">Google Rating</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">144+</div>
+          <div class="stat-label">Reviews</div>
+        </div>
+      </div>
+      <div class="alert-box">
+        Your CNG cylinder MUST be tested every 3 years as per Gas Cylinder Rules, 2004. Untested cylinders will be refused refilling at CNG stations.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY HYDRO TEST -->
+<section id="why">
+  <div class="section-inner">
+    <div class="section-tag">Legal Requirement</div>
+    <h2 class="section-title">Why CNG Hydro Testing is Mandatory</h2>
+    <p class="section-sub">Under the Gas Cylinder Rules, 2004 and PESO guidelines, every CNG vehicle cylinder must undergo hydrostatic testing every 3 years — no exceptions.</p>
+
+    <div class="law-banner">
+      <div class="law-icon">⚖️</div>
+      <div class="law-text">
+        <h3>Gas Cylinder Rules, 2004 — Mandatory Testing</h3>
+        <p><strong>As per Indian Standards IS 8451:2000 and the Gas Cylinder Rules, 2004</strong>, all CNG on-board cylinders must be periodically hydro-tested every <strong>3 years</strong>. Authorized CNG refuelling stations are required to refuse filling cylinders whose test certificate has expired. Non-compliance may also affect your vehicle's insurance coverage. Only PESO-certified centres like ours can issue valid test certificates accepted pan-India.</p>
+      </div>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🔬</div>
+        <h4>Detect Hidden Damage</h4>
+        <p>CNG cylinders operate at 200–250 bar pressure. Micro-cracks, corrosion, and metal fatigue are invisible to the naked eye but detectable through hydrostatic testing before they cause failures.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⛽</div>
+        <h4>CNG Stations Won't Fill Expired Cylinders</h4>
+        <p>Filling stations are mandated by PESO to check test validity. An expired certificate means your vehicle cannot be refuelled until the cylinder is retested and recertified.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🛡️</div>
+        <h4>Legal & Insurance Compliance</h4>
+        <p>An untested cylinder can void your vehicle insurance policy in the event of an accident. The test certificate is a legal document required for continued road use.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚗</div>
+        <h4>Better Vehicle Performance</h4>
+        <p>Testing includes internal cleaning to remove oil build-up and moisture, which improves gas flow efficiency and can enhance your engine's performance after the test.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="process-section">
+  <div class="section-inner">
+    <div class="section-tag">Step by Step</div>
+    <h2 class="section-title">Our Testing Process</h2>
+    <p class="section-sub">A thorough 12-step procedure performed by trained technicians</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>De-pressuring & De-gassing</h4>
+        <p>Safe release of all residual CNG gas in a controlled environment.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Valve Removal</h4>
+        <p>Cylinder valve removed; threads and sealing areas inspected for damage.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Internal & External Cleaning</h4>
+        <p>Thorough cleaning to remove oil, rust, and impurities from inside and outside.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Visual Inspection</h4>
+        <p>Check for dents, corrosion, burns, scratches, and structural anomalies.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <h4>Wall Thickness Measurement</h4>
+        <p>Ultrasonic thickness testing to verify metal integrity without cutting.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">6</div>
+        <h4>Hydrostatic Test (Water Jacket)</h4>
+        <p>Cylinder pressurized beyond operating pressure; volumetric expansion measured precisely.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">7</div>
+        <h4>Drying & Painting</h4>
+        <p>Cylinder thoroughly dried and freshly painted to prevent future corrosion.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">8</div>
+        <h4>Nitrogen Purging & Valve Refitting</h4>
+        <p>Cylinder purged with nitrogen; valve refitted with fresh seals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES / ABOUT -->
+<section id="features">
+  <div class="section-inner">
+    <div class="features-grid">
+      <div>
+        <div class="section-tag">About Us</div>
+        <h2 class="section-title">Authorized, Reliable & Experienced</h2>
+        <p class="section-sub" style="margin-bottom:32px;">We are a PESO-certified testing facility located near Dwarka, New Delhi — conveniently serving lakhs of CNG vehicle owners in West and South-West Delhi.</p>
+        <ul class="features-list">
+          <li>
+            <div class="feat-icon">🏛️</div>
+            <div class="feat-text">
+              <h4>PESO Certified by Govt. of India</h4>
+              <p>Authorized by the Petroleum and Explosives Safety Organisation (PESO) — our certificates are valid pan-India and legally accepted at all CNG stations.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feat-icon">⚡</div>
+            <div class="feat-text">
+              <h4>Fast Turnaround — ~1-2 Hours</h4>
+              <p>No long waiting periods. Most cylinders are tested and returned with a valid certificate within an couple of hours of arrival.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feat-icon">👨‍🔧</div>
+            <div class="feat-text">
+              <h4>Trained & Friendly Staff</h4>
+              <p>Our technicians guide you through every step. Mr. Madan and team are known for their transparent, helpful communication.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feat-icon">📜</div>
+            <div class="feat-text">
+              <h4>Certificate Valid Pan-India for 3 Years</h4>
+              <p>Your PESO-stamped hydro test certificate is accepted at all authorized CNG filling stations across India for the next 3 years.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feat-icon">📍</div>
+            <div class="feat-text">
+              <h4>Easily Accessible Location</h4>
+              <p>Located near Dwarka Sector-19 / Goyla Dairy. Convenient for Dwarka, Najafgarh, Janakpuri, Palam, Chhawla, and Dwarka Expressway residents.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="info-panel">
+          <h3>Quick Info</h3>
+          <p class="sub">Everything you need to know before you visit</p>
+          <div class="info-item">
+            <span class="info-item-icon">📅</span>
+            <span class="info-item-label">Hours</span>
+            <span class="info-item-val">Mon–Sun, 9:00 AM – 6:00 PM</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-icon">📜</span>
+            <span class="info-item-label">Certificate</span>
+            <span class="info-item-val">Valid 3 years, pan-India</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-icon">🏛️</span>
+            <span class="info-item-label">Authority</span>
+            <span class="info-item-val">PESO, Govt. of India</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-icon">📞</span>
+            <span class="info-item-label">Phone</span>
+            <span class="info-item-val"><a href="tel:+919811123672" style="color:#7de89a;">+91 98111 23672</a></span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-icon">📍</span>
+            <span class="info-item-label">Address</span>
+            <span class="info-item-val">Tajpur Khurd, Dwarka Sec-19, New Delhi – 110071</span>
+          </div>
+          <br/>
+          <a href="tel:+919811123672" class="btn-primary" style="display:block;text-align:center;font-size:1.05rem;">📞 Call to Book: +91 98111 23672</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews-section">
+  <div class="section-inner">
+    <div class="section-tag" style="color:#7de89a;">Customer Reviews</div>
+    <h2 class="section-title">What Our Customers Say</h2>
+    <p class="section-sub">4.5 ★ on Google Maps · 144+ verified reviews</p>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"As a customer, I felt heard and supported throughout. Their communication was clear, responsive, and respectful. Mr Madan was answering every step of the process with happiness."</p>
+        <div class="reviewer">— Verified Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Quite a good place for CNG Cylinder Hydro Testing. No rush. They did the testing within 1 hour. It's easily accessible from Dwarka. The cost was ₹1500 and they did satisfactory work."</p>
+        <div class="reviewer">— Verified Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"BEST PLACE for your CNG Hydro Testing. Nice owner and workers. Just take Dwarka Expressway towards Najafgarh — very easy to reach."</p>
+        <div class="reviewer">— Verified Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <p class="review-text">"CNG hydrotesting centre near Goyla Dairy. Does the work fast. Not much rush. Convenient for those in the Dwarka and Najafgarh belt."</p>
+        <div class="reviewer">— Verified Google Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Is Your CNG Certificate Expiring Soon?</h2>
+  <p>Don't wait for the CNG station to turn you away. Book your hydro test today — fast service, valid PESO certificate issued same day.</p>
+  <a href="tel:+919811123672" class="btn-white">📞 Call Now: +91 98111 23672</a>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-inner">
+    <div class="section-tag">Visit Us</div>
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-sub">Walk in or call ahead. We're open all 7 days, 9 AM to 6 PM.</p>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-card">
+          <div class="contact-card-header">📋 Contact Details</div>
+          <div class="contact-card-body">
+            <div class="contact-detail">
+              <span class="c-icon">📞</span>
+              <div>
+                <div class="c-label">Phone</div>
+                <div class="c-val"><a href="tel:+919811123672">+91 98111 23672</a></div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="c-icon">📍</span>
+              <div>
+                <div class="c-label">Address</div>
+                <div class="c-val">Shiv Narayan Mandir, Near Dwarka Sec-19, Tajpur Khurd, New Delhi – 110071</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="c-icon">⏰</span>
+              <div>
+                <div class="c-label">Working Hours</div>
+                <div class="c-val">Monday – Sunday<br/>9:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="c-icon">🗺️</span>
+              <div>
+                <div class="c-label">Nearest Landmarks</div>
+                <div class="c-val">Near Goyla Dairy · Dwarka · Dwarka Sec-19 · Gurgaon</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="c-icon">🚗</span>
+              <div>
+                <div class="c-label">Easily Accessible From</div>
+                <div class="c-val">Dwarka · Najafgarh · Janakpuri · Palam · Chhawla · Dwarka Expressway</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.0!2d77.0089707!3d28.5771427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d111f3f9c6b17%3A0x6f9854d917bda858!2sShree%20Ram%20CNG%20Cylinder%20Testing%20Co.!5e0!3m2!1sen!2sin!4v1"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-text">Shree Ram <span style="color:#5ee87a;">CNG Cylinder Testing Co.</span></div>
+      <p>PESO-authorized hydrostatic testing centre serving West Delhi and surrounding areas. Government of India certified. Issuing test certificates valid pan-India for 3 years.</p>
+      <br/>
+
+      <span class="peso-badge">✓ PESO Certified — Govt. of India</span>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#why">Why Hydro Test?</a></li>
+        <li><a href="#process">Testing Process</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="#">Dwarka</a></li>
+        <li><a href="#">Najafgarh</a></li>
+        <li><a href="#">Janakpuri</a></li>
+        <li><a href="#">Palam</a></li>
+        <li><a href="#">Chhawla</a></li>
+        <li><a href="#">Dwarka Expressway</a></li>
+        <li><a href="#">Gurgaon</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Shree Ram CNG Cylinder Testing Co. · New Delhi, India</span>
+    <span>As per Gas Cylinder Rules, 2004 & PESO Guidelines</span>
+  </div>
+</footer>
+
+</body>
+</html>
